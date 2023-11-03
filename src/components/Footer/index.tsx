@@ -2,10 +2,11 @@
 import React from "react";
 import useAudio from "@/hooks/useAudio";
 import styles from "./Footer.module.css";
+import url from "@/helpers/url";
 
 export default function Footer() {
   const [isActive, setIsActive] = React.useState(false);
-  const { toggle } = useAudio("/music/Virtudes2.mp3", { startTime: 0 });
+  const { toggle } = useAudio(url("/music/Virtudes2.mp3"), { startTime: 0 });
 
   const handleClick = () => {
     setIsActive((v) => !v);

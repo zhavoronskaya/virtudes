@@ -1,3 +1,4 @@
+import url from "@/helpers/url";
 import Image from "next/image";
 
 type Image = {
@@ -20,7 +21,7 @@ const FlexImageGallery = ({ images, className, imageClassName }: Props) => {
         return (
           <div className="flex-1" key={idx}>
             <Image
-              src={image.src}
+              src={url(image.src)}
               width={image.width}
               height={image.height}
               alt={image.alt ?? ""}

@@ -1,6 +1,7 @@
 import Image from "next/image";
 import FadingText from "@/components/FadingText";
 import FlexImageGallery from "@/components/FlexImageGallery";
+import url from "@/helpers/url";
 
 export default function Home() {
   return (
@@ -407,7 +408,7 @@ export default function Home() {
                 height="325"
                 alt=""
                 className="object-cover relative z-1 top-0 left-0 w-96 h-96 rounded-xl opacity-100"
-                src="/image/map.png"
+                src={url("/image/map.png")}
               />
 
               <Image
@@ -416,7 +417,7 @@ export default function Home() {
                 alt=""
                 className="w-1/4 object-cover z-2 absolute block"
                 style={{ top: "17%", left: "48%" }}
-                src="/image/treeTwoPreLoad.png"
+                src={url("/image/treeTwoPreLoad.png")}
               />
             </div>
           </a>

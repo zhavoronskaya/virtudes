@@ -4,6 +4,7 @@ import { MathUtils } from "three";
 import useScrolling from "@/components/Scrolling/useScrolling";
 import styles from "./DecorativeTrees.module.css";
 import { treesMap } from "./constants";
+import url from "@/helpers/url";
 
 const DecortiveTrees = () => {
   const scrolling = useScrolling();
@@ -32,31 +33,35 @@ const DecortiveTrees = () => {
         width="1024"
         height="1024"
         alt=""
+        priority
         className={styles.topleft + " w-8/12 object-cover absolute block"}
-        src="/image/treePreLoad.png"
+        src={url("/image/treePreLoad.png")}
       />
       <Image
         width="1024"
         height="1024"
         alt=""
+        priority
         className={styles.topright + " w-8/12 object-cover absolute block"}
-        src="/image/treePreLoad.png"
+        src={url("/image/treePreLoad.png")}
       />
 
       <Image
         width="1024"
         height="1024"
         alt=""
+        priority
         className={styles.bottomleft + " w-8/12 object-cover absolute block"}
-        src="/image/treePreLoad.png"
+        src={url("/image/treePreLoad.png")}
       />
 
       <Image
         width="1024"
         height="1024"
         alt=""
+        priority
         className={styles.bottomright + " w-8/12 object-cover absolute block"}
-        src="/image/treePreLoad.png"
+        src={url("/image/treePreLoad.png")}
       />
       {/* <Image
         width="1024"

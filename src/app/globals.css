@@ -23,12 +23,12 @@ body {
   background-color: #726472;
   color: rgb(var(--foreground-rgb)); 
   color:#cbf0d0;
-  cursor: url('/icons/cursor.svg') 18 18, auto;
+  cursor: url('/virtudes/icons/cursor.svg') 18 18, auto;
 
 }
 
 a, .pointer {
-  cursor: url('/icons/cursorpointer.svg') 18 18, pointer;
+  cursor: url('/virtudes/icons/cursorpointer.svg') 18 18, pointer;
 }
 
 

@@ -9,6 +9,7 @@ import { texturesMap, cameraMovingMap as cameraMap } from "./constants";
 import { useTexturesMap, TexturesMap } from "@/hooks/useTexturesMap";
 import useMousePosition from "@/components/MousePosition/useMousePosition";
 import useScrolling from "@/components/Scrolling/useScrolling";
+import url from "@/helpers/url";
 
 type Props = {
   // url: string | null;
@@ -47,7 +48,7 @@ function Model(props: Props) {
   const childTexturesMap = useTexturesMap(texturesMap);
   const mousePos = useMousePosition();
   const scrolling = useScrolling();
-  const gltf = useGLTF("/model/VirtudasNew.glb");
+  const gltf = useGLTF(url("/model/VirtudasNew.glb"));
   // console.log("AAA", gltf);
 
   THREE.ColorManagement.enabled = true;
@@ -192,4 +193,4 @@ function Model(props: Props) {
 
 export default React.memo(Model);
 
-useGLTF.preload("/model/VirtudasNew.glb");
+useGLTF.preload(url("/model/VirtudasNew.glb"));
