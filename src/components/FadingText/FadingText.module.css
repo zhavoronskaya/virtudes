@@ -1,0 +1,54 @@
+@keyframes fade-in {
+  100% {
+    opacity: 1;
+    filter: blur(0);
+  }
+}
+
+.fadingText :global(.word) {
+  display: inline-block;
+  opacity: 0;
+  filter: blur(4px);
+}
+
+.fadingText:global(.active) :global(.word) {
+  animation-duration: 0.8s;
+  animation-timing-function: cubic-bezier(0.11, 0, 0.5, 0);
+  animation-fill-mode: forwards;
+  animation-name: fade-in;
+}
+/* 
+.fadingText :global(.word-1) { animation-delay: 1s }
+.fadingText :global(.word-2) { animation-delay: 1.2s }
+.fadingText :global(.word-3) { animation-delay: 1.3s }
+.fadingText :global(.word-4) { animation-delay: 1.4s }
+.fadingText :global(.word-5) { animation-delay: 1.5s }
+.fadingText :global(.word-6) { animation-delay: 1.6s }
+.fadingText :global(.word-7) { animation-delay: 1.7s }
+.fadingText :global(.word-8) { animation-delay: 1.8s }
+.fadingText :global(.word-9) { animation-delay: 1.9s }
+.fadingText :global(.word-10) { animation-delay: 2s }
+
+.fadingText :global(.word-11) { animation-delay: 2.1s }
+.fadingText :global(.word-12) { animation-delay: 2.2s }
+.fadingText :global(.word-13) { animation-delay: 2.3s }
+.fadingText :global(.word-14) { animation-delay: 2.4s }
+.fadingText :global(.word-15) { animation-delay: 2.5s }
+.fadingText :global(.word-16) { animation-delay: 2.6s }
+.fadingText :global(.word-17) { animation-delay: 2.7s }
+.fadingText :global(.word-18) { animation-delay: 2.8s }
+.fadingText :global(.word-19) { animation-delay: 2.9s }
+.fadingText :global(.word-20) { animation-delay: 3.0s }
+
+.fadingText :global(.word-21) { animation-delay: 3.1s }
+.fadingText :global(.word-22) { animation-delay: 3.2s }
+.fadingText :global(.word-23) { animation-delay: 3.3s }
+.fadingText :global(.word-24) { animation-delay: 3.4s }
+.fadingText :global(.word-25) { animation-delay: 3.5s }
+.fadingText :global(.word-26) { animation-delay: 3.6s }
+.fadingText :global(.word-27) { animation-delay: 3.7s }
+.fadingText :global(.word-28) { animation-delay: 3.8s }
+.fadingText :global(.word-29) { animation-delay: 3.9s }
+.fadingText :global(.word-30) { animation-delay: 4.0s }
+ */
+

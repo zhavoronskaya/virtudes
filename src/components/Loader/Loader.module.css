@@ -1,0 +1,17 @@
+.loader {
+  position: fixed;
+  top: 60%;
+  left: 0;
+  right: 0;
+  /* bottom: 20%; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media screen and (max-width: 640px) {
+  .loader {
+    top: 65%;
+    /* bottom: 20%; */
+  }
+}
