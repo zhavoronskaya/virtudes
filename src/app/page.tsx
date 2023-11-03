@@ -102,10 +102,10 @@ export default function Home() {
             <FadingText offset={0.152}>
               The abundant trees, flowers, and shrubs that flourish within the
               confines of Parque das Virtudes collectively form a lush and
-              vibrant tapestry of nature's splendor. This verdant treasure trove
-              of botanical diversity not only enhances the park's visual appeal
-              but also creates a deeply immersive and harmonious atmosphere for
-              all who venture within.
+              vibrant tapestry of nature&#39;s splendor. This verdant treasure
+              trove of botanical diversity not only enhances the park&#39;s
+              visual appeal but also creates a deeply immersive and harmonious
+              atmosphere for all who venture within.
             </FadingText>
           </div>
         </div>
@@ -142,11 +142,12 @@ export default function Home() {
         <div className=" lg:col-start-2 p-4 ">
           <div className="lg:text-5xl text-3xl leading-tight ">
             <FadingText offset={0.278}>
-              This location is home to Portugal's largest Ginkgo Biloba tree,
-              dating back to the 18th century and originally hailing from China.
-              This majestic tree stands at an impressive height of approximately
-              35 meters and was officially recognized as a tree of public
-              interest by the General Directorate of Forestry in January 2005.
+              This location is home to Portugal&#39;s largest Ginkgo Biloba
+              tree, dating back to the 18th century and originally hailing from
+              China. This majestic tree stands at an impressive height of
+              approximately 35 meters and was officially recognized as a tree of
+              public interest by the General Directorate of Forestry in January
+              2005.
             </FadingText>
           </div>
         </div>
@@ -190,7 +191,7 @@ export default function Home() {
           </p>
           <div className="lg:text-5xl text-3xl  mb-16 leading-tight block ">
             <FadingText offset={0.411}>
-              While not directly overlooking the river, the park's elevated
+              While not directly overlooking the river, the park&#39;s elevated
               position provides glimpses of the Douro River, especially as it
               winds its way through the city. The views of the river can be
               particularly enchanting during sunrise and sunset.
@@ -202,7 +203,7 @@ export default function Home() {
           </p>
           <div className="lg:text-5xl text-3xl mb-16 leading-tight block ">
             <FadingText offset={0.473}>
-              One of Porto's iconic landmarks, the Customs House, is often
+              One of Porto&#39;s iconic landmarks, the Customs House, is often
               visible from the park. This historic building, with its
               distinctive architecture, adds to the scenic charm of the park.
             </FadingText>
@@ -234,7 +235,7 @@ export default function Home() {
           </span>
           <div className="mt-4 pr-6 ">
             <span className="lg:text-5xl text-3xl font-bold  leading-tight">
-              Escape from the city's hustle and bustle
+              Escape from the city&#39;s hustle and bustle
             </span>
           </div>
         </div>
@@ -311,10 +312,10 @@ export default function Home() {
       <div className="grid lg:grid-cols-2    pt-16 p-4">
         <div className=" lg:col-start-1 p-4 pb-0">
           <span className="lg:text-8xl text-6xl font-extrabold block ">
-            DON'T MISS
+            DON&#39;T MISS
           </span>
           <span className=" text-xl tracking-widest font-bold block">
-            The Sky's Final Brushstroke
+            The Sky&#39;s Final Brushstroke
           </span>
           <div className="mt-4 pr-6">
             <span className="lg:text-5xl text-3xl leading-tight font-bold block">
@@ -332,9 +333,10 @@ export default function Home() {
       <div className="grid lg:grid-cols-2  pb-0 pt-0 p-4 mb-64">
         <div className=" lg:col-start-2 p-4 lg:text-5xl text-3xl leading-tight block">
           <FadingText offset={0.832}>
-            Beyond the river and cityscape, you can also glimpse some of Porto's
-            historic neighborhoods and districts. These views provide a sense of
-            the city's rich history and architectural diversity.
+            Beyond the river and cityscape, you can also glimpse some of
+            Porto&#39;s historic neighborhoods and districts. These views
+            provide a sense of the city&#39;s rich history and architectural
+            diversity.
           </FadingText>
         </div>
       </div>
