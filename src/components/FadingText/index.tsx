@@ -23,7 +23,7 @@ const FadingText = ({ id, offset, children }: Props) => {
           <span key={word + idx}>
             <span
               className={`word word-${idx + 1}`}
-              style={{ animationDelay: idx * 0.2 + "s" }}
+              style={{ animationDelay: idx * 0.1 + "s" }}
             >
               {word}
             </span>{" "}
