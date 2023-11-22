@@ -28,7 +28,7 @@ export default function Header() {
 
       <div className={headerClass}>
         <nav className="p-4 relative text-xl leading-tight invisible md:visible">
-          <ul className="flex justify-between">
+          <ul className={styles.glass + " flex justify-between"}>
             <li className="flex-1 p-4 text-center">
               <Link
                 href="#home"
