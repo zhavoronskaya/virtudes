@@ -1,21 +1,27 @@
 "use client";
 import Image from "next/image";
 import { MathUtils } from "three";
+import url from "@/helpers/url";
 import useScrolling from "@/components/Scrolling/useScrolling";
 import styles from "./DecorativeTrees.module.css";
-import { treesMap } from "./constants";
-import url from "@/helpers/url";
+import { treesMap, TreeId } from "./constants";
+
+const treeClassName = (id: TreeId, offset: number) => {
+  let classNames = ["w-8/12 object-cover absolute block"];
+  if (offset > 0) classNames.push("active");
+  if (id === "tl") classNames.push(styles.topleft);
+  if (id === "tr") classNames.push(styles.topright);
+  if (id === "bl") classNames.push(styles.bottomleft);
+  if (id === "br") classNames.push(styles.bottomright);
+  return classNames.join(" ");
+};
 
 const DecortiveTrees = () => {
   const scrolling = useScrolling();
   const offset = scrolling.offset;
-
-  // console.log("treesMap", treesMap);
   const firstLargestIndex = treesMap.findIndex((v) => v.offset >= offset);
   const endPos = treesMap[firstLargestIndex + 1];
   const startPos = treesMap[firstLargestIndex];
-
-  // console.log("startPos", startPos, offset);
 
   if (!startPos || !endPos) return null;
 
@@ -24,17 +30,18 @@ const DecortiveTrees = () => {
 
   let scale = MathUtils.lerp(startPos.scale, endPos.scale, interval);
   scale = Math.max(1, scale);
+
   return (
     <div
       className={styles.decorTrees + " relative w-full h-full"}
-      style={{ scale: scale }}
+      style={{ scale }}
     >
       <Image
         width="1024"
         height="1024"
         alt=""
         priority
-        className={styles.topleft + " w-8/12 object-cover absolute block"}
+        className={treeClassName("tl", offset)}
         src={url("/image/treePreLoad.png")}
       />
       <Image
@@ -42,7 +49,7 @@ const DecortiveTrees = () => {
         height="1024"
         alt=""
         priority
-        className={styles.topright + " w-8/12 object-cover absolute block"}
+        className={treeClassName("tr", offset)}
         src={url("/image/treePreLoad.png")}
       />
 
@@ -51,7 +58,7 @@ const DecortiveTrees = () => {
         height="1024"
         alt=""
         priority
-        className={styles.bottomleft + " w-8/12 object-cover absolute block"}
+        className={treeClassName("bl", offset)}
         src={url("/image/treePreLoad.png")}
       />
 
@@ -60,9 +67,10 @@ const DecortiveTrees = () => {
         height="1024"
         alt=""
         priority
-        className={styles.bottomright + " w-8/12 object-cover absolute block"}
+        className={treeClassName("br", offset)}
         src={url("/image/treePreLoad.png")}
       />
+
       {/* <Image
         width="1024"
         height="1024"

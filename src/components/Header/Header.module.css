@@ -1,14 +1,14 @@
-.glass{
+.glass {
   background: rgba(255, 255, 255, 0.2);
-border-radius: 16px;
-box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-backdrop-filter: blur(5px);
-border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
 }
+
 .burger {
   width: 30px;
   height: 40px;
-
   display: flex;
   flex-direction: column;
   gap: 4px;
@@ -21,26 +21,23 @@ border: 1px solid rgba(255, 255, 255, 0.3);
 .burgerLine {
   display: block;
   height: 5px;
-  background-color: #cbf0d0;;
+  background-color: #cbf0d0;
   width: 100%;
 }
 
 .header {
-
 }
 
 .header:global(.active) nav {
   /* margin-left: 160px; */
   height: 100vh;
-  visibility: visible!important;
+  visibility: visible !important;
   border-radius: 8px;
   background-color: #928586b8;
-  font-size: 3.75rem; 
+  font-size: 3.75rem;
   line-height: 1;
 }
 
-.header:global(.active) nav ul{
-  display: block!important;
-
+.header:global(.active) nav ul {
+  display: block !important;
 }
-

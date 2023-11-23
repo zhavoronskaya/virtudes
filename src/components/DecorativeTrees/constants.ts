@@ -1,9 +1,11 @@
-type TreesMap = {
+export type TreeId = "tl" | "tr" | "bl" | "br";
+
+export type TreeSettings = {
   scale: number;
   offset: number;
 };
 
-export const treesMap: TreesMap[] = [
+export const treesMap: TreeSettings[] = [
   { scale: 1, offset: 0 },
   { scale: 1.3, offset: 0.004 },
   { scale: 1.6, offset: 0.008 },

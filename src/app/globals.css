@@ -6,7 +6,6 @@
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
-
 }
 /* 
 @media (prefers-color-scheme: dark) {
@@ -19,29 +18,27 @@
 
 body {
   overflow: hidden;
-  font-family: 'Melodrama', monospace;
+  /* font-family: "Melodrama", monospace; */
+  font-family: "Lora", sans-serif;
   background-color: #726472;
-  color: rgb(var(--foreground-rgb)); 
-  color:#cbf0d0;
-  cursor: url('/virtudes/icons/cursor.svg') 18 18, auto;
-
+  /* color: rgb(var(--foreground-rgb)); */
+  color: #cbf0d0;
+  /* color: red; */
+  cursor: url("/virtudes/icons/cursor.svg") 18 18, auto;
 }
 
-a, .pointer {
-  cursor: url('/virtudes/icons/cursorpointer.svg') 18 18, pointer;
+a,
+.pointer {
+  cursor: url("/virtudes/icons/cursorpointer.svg") 18 18, pointer;
 }
-
-
-
 
 .img-blur {
   filter: blur(3px);
-  transition: .5s ease-in-out;
+  transition: 0.5s ease-in-out;
 }
 .img-blur:hover {
-	filter: blur(0);
+  filter: blur(0);
 }
-
 
 #main.loaded span.mouse {
   visibility: visible;

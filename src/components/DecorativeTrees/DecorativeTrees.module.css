@@ -1,28 +1,49 @@
 .decorTrees {
-  transform-origin: center
+  transform-origin: center;
 }
 
-.decorTrees .topleft {
+.topleft {
   top: 0;
   left: 0;
+  transition: transform 0.5s;
   transform: translate(-50%, -50%) rotateZ(68deg);
 }
-.decorTrees .topright {
+
+.topleft:global(.active) {
+  transform: translate(-55%, -55%) rotateZ(70deg);
+}
+
+.topright {
   top: 0;
   right: 0;
+  transition: transform 1.2s;
   transform: translate(50%, -50%) rotateZ(165deg);
 }
-.decorTrees .bottomleft {
+
+.topright:global(.active) {
+  transform: translate(55%, -55%) rotateZ(160deg);
+}
+
+.bottomleft {
   bottom: 0;
   left: 0;
+  transition: transform 0.7s;
   transform: translate(-50%, 50%) rotateZ(26deg);
-
 }
-.decorTrees .bottomright {
+
+.bottomleft:global(.active) {
+  transform: translate(-55%, 55%) rotateZ(20deg);
+}
+
+.bottomright {
   bottom: 0;
   right: 0;
+  transition: transform 1s;
   transform: translate(50%, 50%) rotateZ(331deg);
-  
+}
+
+.bottomright:global(.active) {
+  transform: translate(55%, 55%) rotateZ(320deg);
 }
 
 .decorTrees .left {
@@ -43,5 +64,3 @@
   right: 50%;
   transform: translate(0%, 20%) rotateZ(11deg);
 }
-
-

@@ -2,25 +2,39 @@ import Image from "next/image";
 import FadingText from "@/components/FadingText";
 import FlexImageGallery from "@/components/FlexImageGallery";
 import url from "@/helpers/url";
+import DecorativeTitle from "@/components/DecorativeTitle";
 
 export default function Home() {
   return (
-    <div className="text-[#cbf0d0] relative z-0">
-      <div className="h-screen grid p-4 pt-16 mb-64 place-items-center">
-        <div className="p-4">
-          <h1 className="pb-0 lg:text-8xl text-6xl font-extrabold  text-center">
+    <div className="relative z-0">
+      <div className="h-screen flex flex-col p-4 pt-16 mb-64">
+        <div className="w-full flex-1 flex flex-col justify-center">
+          <DecorativeTitle />
+          {/* <h1 className="pb-0 lg:text-8xl text-6xl font-extrabold  text-center">
             <span className="block ">PARQUE</span>
             <span className="block lg:text-6xl text-4xl "> DAS </span>
             <span className="block">VIRTUDES</span>
-          </h1>
-          <h2 className="lg:text-5xl text-3xl  text-center leading-tight ">
+          </h1> */}
+          <h2 className="lg:text-3xl text-xl  text-center leading-tight ">
             Peaceful lovely park in the heart of Porto, Portugal
           </h2>
         </div>
-        <div className="mt-8 text-center ">
-          <span className="mouse p-4 w-full block lg:text-2xl text-xl text-center opacity-60 animate-bounce infinite leading-tight invisible">
-            lets walk together
-          </span>
+
+        <div className="text-center">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="48"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="#cbf0d0"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            className="inline-block animate-bounce infinite"
+          >
+            <path d="M12 5v14" />
+            <path d="m19 12-7 7-7-7" />
+          </svg>
         </div>
       </div>
 

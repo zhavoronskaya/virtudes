@@ -1,4 +1,5 @@
 "use client";
+import React from "react";
 import useScrolling from "../Scrolling/useScrolling";
 import styles from "./FadingText.module.css";
 
@@ -10,11 +11,14 @@ type Props = {
 
 const FadingText = ({ id, offset, children }: Props) => {
   const scrolling = useScrolling();
+  const isVisible = React.useRef(false);
 
   const words = children.split(" ");
   const isActive = scrolling.offset >= offset;
+  if (isActive) isVisible.current = true;
+
   let className = styles.fadingText;
-  if (isActive) className += " active";
+  if (isVisible.current) className += " active";
 
   return (
     <div id={id} className={className}>
