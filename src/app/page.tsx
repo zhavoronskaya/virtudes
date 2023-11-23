@@ -3,6 +3,7 @@ import FadingText from "@/components/FadingText";
 import FlexImageGallery from "@/components/FlexImageGallery";
 import url from "@/helpers/url";
 import DecorativeTitle from "@/components/DecorativeTitle";
+import { Loader } from "@/components/Loader";
 
 export default function Home() {
   return (
@@ -20,21 +21,8 @@ export default function Home() {
           </h2>
         </div>
 
-        <div className="text-center">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="48"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="#cbf0d0"
-            strokeWidth="2"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            className="inline-block animate-bounce infinite"
-          >
-            <path d="M12 5v14" />
-            <path d="m19 12-7 7-7-7" />
-          </svg>
+        <div className="flex justify-center">
+          <Loader />
         </div>
       </div>
 

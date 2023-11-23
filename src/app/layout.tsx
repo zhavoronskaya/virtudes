@@ -8,8 +8,6 @@ import MousePosition from "@/components/MousePosition";
 import Scrolling from "@/components/Scrolling";
 import DecortiveTrees from "@/components/DecorativeTrees";
 import MainScene from "@/scenes/Virtudes";
-import { Loader } from "@/components/Loader";
-import Filter from "@/components/Filters";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -61,8 +59,6 @@ export default function RootLayout({
             </div>
 
             {children}
-
-            <Loader />
           </Scrolling>
         </main>
 

@@ -1,7 +1,6 @@
 "use client";
 import React from "react";
 import { useProgress } from "@react-three/drei";
-import styles from "./Loader.module.css";
 
 export function Loader() {
   const loading = useProgress();
@@ -17,16 +16,32 @@ export function Loader() {
     }
   }, [isLoaded]);
 
-  if (isLoaded) return null;
+  if (isLoaded) {
+    return (
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="48"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="#cbf0d0"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        className="inline-block animate-bounce infinite"
+      >
+        <path d="M12 5v14" />
+        <path d="m19 12-7 7-7-7" />
+      </svg>
+    );
+  }
 
   return (
-    <div className={styles.loader}>
-      <span className="p-4 w-full block lg:text-2xl text-xl text-center animate-pulse infinite leading-tight ">
-        Loading...
-        <br />
-        {Math.floor(loading.progress)}%
-      </span>
-    </div>
+    <span
+      className="lg:text-2xl text-xl inline-block"
+      style={{ height: "48px" }}
+    >
+      Loading... {Math.floor(loading.progress)}%
+    </span>
   );
 }
 
