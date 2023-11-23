@@ -16,7 +16,7 @@ export default function Home() {
             <span className="block lg:text-6xl text-4xl "> DAS </span>
             <span className="block">VIRTUDES</span>
           </h1> */}
-          <h2 className="lg:text-3xl text-xl  text-center leading-tight ">
+          <h2 className="lg:text-2xl text-xl  text-center leading-tight ">
             Peaceful lovely park in the heart of Porto, Portugal
           </h2>
         </div>
