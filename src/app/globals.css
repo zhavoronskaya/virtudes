@@ -19,7 +19,12 @@
 body {
   overflow: hidden;
   /* font-family: "Melodrama", monospace; */
-  font-family: "Lora", sans-serif;
+  /* font-family: "Lora", sans-serif; */
+  /* font-family: 'Stardom', sans-serif; */
+/* font-family: 'Gambarino', serif; */
+
+/* font-family: 'Erode', serif; */
+font-family: 'Karma', serif;
   background-color: #726472;
   /* color: rgb(var(--foreground-rgb)); */
   color: #cbf0d0;

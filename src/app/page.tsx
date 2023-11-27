@@ -271,12 +271,12 @@ export default function Home() {
 
       <div className="grid lg:grid-cols-2 p-4  pb-0 pt-16 mb-64" id="art">
         <div className="p-4  lg:col-span-1 ">
-          <span className=" lg:text-7xl  text-5xl block  font-extrabold uppercase">
+          <span className=" lg:text-7xl  text-4xl block  font-extrabold uppercase">
             SCULPTURE
           </span>
           <span className="lg:text-4xl  text-2xl "> and</span>
 
-          <span className=" lg:text-7xl text-5xl block  font-extrabold uppercase ">
+          <span className=" lg:text-7xl text-4xl block  font-extrabold uppercase ">
             ARCHITECTURE
           </span>
         </div>
