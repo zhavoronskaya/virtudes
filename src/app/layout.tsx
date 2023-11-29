@@ -49,6 +49,10 @@ export default function RootLayout({
           href="https://api.fontshare.com/v2/css?f[]=erode&display=swap"
           rel="stylesheet"
         ></link>
+        <link
+          href="https://api.fontshare.com/v2/css?f[]=cabinet-grotesk&display=swap"
+          rel="stylesheet"
+        ></link>
       </head>
       <body>
         <header className="fixed left-0 top-0 w-full z-10">

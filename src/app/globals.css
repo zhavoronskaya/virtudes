@@ -23,13 +23,21 @@ body {
   /* font-family: 'Stardom', sans-serif; */
 /* font-family: 'Gambarino', serif; */
 
-/* font-family: 'Erode', serif; */
-font-family: 'Karma', serif;
+font-family: 'Erode', serif;
+/* font-family: 'Karma', serif; */
+
+/* font-family: 'Cabinet Grotesk', sans-serif; */
+
   background-color: #726472;
   /* color: rgb(var(--foreground-rgb)); */
   color: #cbf0d0;
   /* color: red; */
   cursor: url("/virtudes/icons/cursor.svg") 18 18, auto;
+}
+h2 {
+
+  /* font-family: 'Karma', serif; */
+  font-family: "Melodrama", monospace;
 }
 
 a,

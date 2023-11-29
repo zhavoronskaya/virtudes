@@ -8,31 +8,33 @@ import { Loader } from "@/components/Loader";
 export default function Home() {
   return (
     <div className="relative z-0">
-      <div className="h-screen flex flex-col p-4 pt-16 mb-64">
-        <div className="w-full flex-1 flex flex-col justify-center">
+      <Loader />
+
+      <div
+        className="h-screen flex flex-col p-4 pt-16 mb-64"
+        style={{ height: "100dvh" }}
+      >
+        <div className="w-full flex-1 flex flex-col justify-center ">
           <DecorativeTitle />
           {/* <h1 className="pb-0 lg:text-8xl text-6xl font-extrabold  text-center">
             <span className="block ">PARQUE</span>
             <span className="block lg:text-6xl text-4xl "> DAS </span>
             <span className="block">VIRTUDES</span>
           </h1> */}
-          <h2 className="lg:text-2xl text-xl  text-center leading-tight ">
+          <div className="lg:text-2xl text-xl  text-center leading-tight ">
             Peaceful lovely park in the heart of Porto, Portugal
-          </h2>
+          </div>
         </div>
-
-        <div className="flex justify-center">
-          <Loader />
-        </div>
+        {/* <div className="flex justify-center"> */}
       </div>
 
       <div className="grid lg:grid-cols-2 mb-64 p-4 pb-0 pt-16" id="home">
         <div className=" lg:col-start-1 p-4">
-          <span className="lg:text-8xl text-6xl font-extrabold block uppercase">
+          <h2 className="lg:text-8xl text-6xl font-extrabold block uppercase">
             Magic <br />
             Garden
-          </span>
-          <span className=" tracking-widest font-bold block">
+          </h2>
+          <span className=" tracking-widest font-bold block opacity-80">
             Brings beauty to your life
           </span>
           <div className="mt-4 pr-6">
@@ -71,13 +73,13 @@ export default function Home() {
 
       <div className="grid lg:grid-cols-2 p-4  pt-16" id="greenery">
         <div className=" lg:col-start-1 p-4">
-          <span className="lg:text-8xl text-6xl font-extrabold block uppercase">
+          <h2 className="lg:text-8xl text-6xl font-extrabold block uppercase">
             NATURAL
-          </span>
-          <span className="lg:text-8xl text-6xl font-extrabold block uppercase">
+          </h2>
+          <h2 className="lg:text-8xl text-6xl font-extrabold block uppercase">
             BEAUTY
-          </span>
-          <span className=" tracking-widest font-bold block">
+          </h2>
+          <span className=" tracking-widest font-bold block opacity-80">
             Lush Greenery
           </span>
 
@@ -116,17 +118,25 @@ export default function Home() {
 
       <div className="grid lg:grid-cols-2 p-4  pt-16 pb-0">
         <div className="p-4 lg:col-start-1 ">
-          <p className="lg:text-8xl text-6xl font-extrabold uppercase">FLORA</p>
-          <span className="font-bold tracking-widest">1 ha area</span>
+          <h2 className="lg:text-8xl text-6xl font-extrabold uppercase">
+            FLORA
+          </h2>
+          <span className="font-bold tracking-widest opacity-80">
+            1 ha area
+          </span>
           <div className="mt-4">
             <p className="lg:text-5xl text-3xl leading-tight block">
               Ginkgo biloba
             </p>
-            <span className="font-bold block tracking-widest">classified</span>
+            <span className="font-bold block tracking-widest opacity-80">
+              classified
+            </span>
             <p className="lg:text-5xl text-3xl leading-tight block">
               Chorisia speciosa
             </p>
-            <span className="font-bold block tracking-widest">in process</span>
+            <span className="font-bold block tracking-widest opacity-80">
+              in process
+            </span>
           </div>
         </div>
         <div className="p-4 lg:col-start-2 ">
@@ -158,13 +168,13 @@ export default function Home() {
 
       <div className="grid lg:grid-cols-2   pt-16 p-4 pb-0 " id="overview">
         <div className=" lg:col-start-1 p-4">
-          <span className="lg:text-8xl text-6xl font-extrabold block uppercase">
+          <h2 className="lg:text-8xl text-6xl font-extrabold block uppercase">
             Unique
-          </span>
-          <span className="lg:text-8xl text-6xl font-extrabold block uppercase">
+          </h2>
+          <h2 className="lg:text-8xl text-6xl font-extrabold block uppercase">
             overview
-          </span>
-          <span className=" tracking-widest text-xl font-bold block">
+          </h2>
+          <span className=" tracking-widest text-xl font-bold block opacity-80">
             Unparalleled overlooks
           </span>
 
@@ -188,7 +198,10 @@ export default function Home() {
 
       <div className="grid lg:grid-cols-2 mb-64 pb-0 pt-0 p-4 ">
         <div className=" lg:col-start-2 p-4 ">
-          <span className="font-bold  tracking-widest block"> Majestic</span>
+          <span className="font-bold  tracking-widest block opacity-80">
+            {" "}
+            Majestic
+          </span>
           <p className="lg:text-5xl text-3xl pb-4 font-bold leading-tight block ">
             Douro River
           </p>
@@ -200,7 +213,10 @@ export default function Home() {
               particularly enchanting during sunrise and sunset.
             </FadingText>
           </div>
-          <span className="font-bold tracking-widest block"> Iconic </span>
+          <span className="font-bold tracking-widest block opacity-80">
+            {" "}
+            Iconic{" "}
+          </span>
           <p className="lg:text-5xl text-3xl pb-4  font-bold leading-tight block ">
             Customs House
           </p>
@@ -211,7 +227,10 @@ export default function Home() {
               distinctive architecture, adds to the scenic charm of the park.
             </FadingText>
           </div>
-          <span className="font-bold tracking-widest block"> Charming</span>
+          <span className="font-bold tracking-widest block opacity-80">
+            {" "}
+            Charming
+          </span>
           <p className="lg:text-5xl text-3xl pb-4 font-bold leading-tight block ">
             Vila Nova de Gaia
           </p>
@@ -227,13 +246,9 @@ export default function Home() {
 
       <div className="grid lg:grid-cols-2   pt-16 p-4 pb-0">
         <div className=" lg:col-start-1 p-4  ">
-          <span className="lg:text-8xl text-6xl font-extrabold block ">
-            HIDDEN
-          </span>
-          <span className="lg:text-8xl text-6xl font-extrabold block ">
-            OASIS
-          </span>
-          <span className=" text-xl tracking-widest font-bold block">
+          <h2 className="lg:text-8xl text-6xl font-extrabold block ">HIDDEN</h2>
+          <h2 className="lg:text-8xl text-6xl font-extrabold block ">OASIS</h2>
+          <span className=" text-xl tracking-widest font-bold block opacity-80">
             Gentle Serenity
           </span>
           <div className="mt-4 pr-6 ">
@@ -271,42 +286,59 @@ export default function Home() {
 
       <div className="grid lg:grid-cols-2 p-4  pb-0 pt-16 mb-64" id="art">
         <div className="p-4  lg:col-span-1 ">
-          <span className=" lg:text-7xl  text-4xl block  font-extrabold uppercase">
+          <h2 className=" lg:text-7xl  text-4xl block  font-extrabold uppercase">
             SCULPTURE
-          </span>
-          <span className="lg:text-4xl  text-2xl "> and</span>
+          </h2>
+          <h2 className="lg:text-4xl  text-2xl opacity-80"> and</h2>
 
-          <span className=" lg:text-7xl text-4xl block  font-extrabold uppercase ">
+          <h2 className=" lg:text-7xl text-4xl block  font-extrabold uppercase ">
             ARCHITECTURE
-          </span>
+          </h2>
         </div>
         <div className="p-4 lg:col-span-1 ">
           <p className=" lg:text-5xl text-3xl   leading-tight">
             A meio entre isto e aquilo
           </p>
-          <span className=" tracking-widest font-bold block pb-2"> (2013)</span>
+          <span className=" tracking-widest font-bold block pb-2 opacity-80">
+            {" "}
+            (2013)
+          </span>
           <p className="lg:text-5xl text-3xl leading-tight">Isaque Pinheiro</p>
 
-          <span className="tracking-widest font-bold block pb-2"> (1972)</span>
+          <span className="tracking-widest font-bold block pb-2 opacity-80">
+            {" "}
+            (1972)
+          </span>
           <p className=" lg:text-5xl text-3xl leading-tight">Roda</p>
 
-          <span className="tracking-widest font-bold block pb-2">(2013)</span>
+          <span className="tracking-widest font-bold block pb-2 opacity-80">
+            (2013)
+          </span>
           <p className="lg:text-5xl text-3xl leading-tight">Paulo Neves</p>
 
-          <span className="tracking-widest font-bold block pb-2"> (1959)</span>
+          <span className="tracking-widest font-bold block pb-2 opacity-80">
+            {" "}
+            (1959)
+          </span>
           <p className="lg:text-5xl text-3xl leading-tight">
             Árvore das Virtudes
           </p>
 
-          <span className="tracking-widest font-bold block pb-2"> (2013)</span>
+          <span className="tracking-widest font-bold block pb-2 opacity-80">
+            {" "}
+            (2013)
+          </span>
           <p className="lg:text-5xl text-3xl leading-tight">Vítor Ribeiro</p>
 
-          <span className="tracking-widest font-bold block pb-2"> (1957)</span>
+          <span className="tracking-widest font-bold block pb-2 opacity-80">
+            {" "}
+            (1957)
+          </span>
           <p className=" lg:text-5xl text-3xl ">Chafariz das Virtudes</p>
-          <span className="tracking-widest font-bold block ">
+          <span className="tracking-widest font-bold block opacity-80">
             Baroque fountain, initially designated as Fonte do Rio Frio, 1619.
           </span>
-          <span className="tracking-widest font-bold block ">
+          <span className="tracking-widest font-bold block opacity-80 ">
             National Monument by Royal order of D. Manuel II of 23-06-1910
           </span>
         </div>
@@ -314,10 +346,10 @@ export default function Home() {
 
       <div className="grid lg:grid-cols-2    pt-16 p-4">
         <div className=" lg:col-start-1 p-4 pb-0">
-          <span className="lg:text-8xl text-6xl font-extrabold block ">
+          <h2 className="lg:text-8xl text-6xl font-extrabold block ">
             DON&#39;T MISS
-          </span>
-          <span className=" text-xl tracking-widest font-bold block">
+          </h2>
+          <span className=" text-xl tracking-widest font-bold block opacity-80">
             The Sky&#39;s Final Brushstroke
           </span>
           <div className="mt-4 pr-6">
@@ -325,7 +357,7 @@ export default function Home() {
               The sunset views over the Douro River
             </span>
 
-            <span className=" lg:text-4xl text-2xl  block">and</span>
+            <span className=" lg:text-4xl text-2xl  block opacity-80">and</span>
             <span className="lg:text-5xl text-3xl font-bold block">
               explore the nearby historic neighborhoods
             </span>
@@ -346,16 +378,16 @@ export default function Home() {
 
       <div className="grid lg:grid-cols-4 p-4 pb-0 pt-16 mb-64" id="contact">
         <div className="p-4  lg:col-start-1 lg:col-span-2 row-span-2">
-          <span className="lg:text-8xl text-6xl block font-extrabold uppercase">
+          <h2 className="lg:text-8xl text-6xl block font-extrabold uppercase">
             WORKING HOURS
-          </span>
-          <span className="text-xl block tracking-widest font-bold ">
+          </h2>
+          <span className="text-xl block tracking-widest font-bold opacity-80">
             Open to visitors
           </span>
         </div>
         <div className="p-4  lg:col-start-3 leading-tight">
           <span className=" lg:text-5xl text-3xl font-bold block">Summer</span>
-          <span className=" text-xl tracking-widest font-bold block">
+          <span className=" text-xl tracking-widest font-bold block opacity-80">
             April - September
           </span>
         </div>
@@ -366,7 +398,7 @@ export default function Home() {
         </div>
         <div className="p-4  lg:col-start-3 leading-tight">
           <span className=" lg:text-5xl text-3xl font-bold block">Winter</span>
-          <span className=" text-xl tracking-widest font-bold block">
+          <span className=" text-xl tracking-widest font-bold block opacity-80">
             October - March
           </span>
         </div>
@@ -383,9 +415,9 @@ export default function Home() {
             target="_blank"
             className="pb-0 lg:text-8xl text-6xl block font-extrabold uppercase"
           >
-            LOCATION
+            <h2>LOCATION</h2>
           </a>
-          <span className="text-xl tracking-widest block font-bold ">
+          <span className="text-xl tracking-widest block font-bold opacity-80 ">
             Click the map for view
           </span>
           <span className="lg:text-5xl text-3xl  mt-4  block ">
