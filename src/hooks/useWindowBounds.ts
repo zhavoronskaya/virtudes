@@ -2,20 +2,21 @@
 import React from "react";
 
 export default function useWindowBounds() {
-  const [width, setWidth] = React.useState(window.innerWidth);
-  const [height, setHeight] = React.useState(window.innerHeight);
+  const [width, setWidth] = React.useState(0);
+  const [height, setHeight] = React.useState(0);
 
   React.useEffect(() => {
-    const handleResize = () => {
+    const setWindowBounds = () => {
       setWidth(window.innerWidth);
       setHeight(window.innerHeight);
     };
 
-    window.addEventListener("resize", handleResize);
+    setWindowBounds();
 
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
+    // window.addEventListener("resize", setWindowBounds);
+    // return () => {
+    //   window.removeEventListener("resize", setWindowBounds);
+    // };
   }, []);
 
   return { width, height };

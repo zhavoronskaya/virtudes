@@ -1,7 +1,6 @@
 import "./globals.css";
 import React, { Suspense } from "react";
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import MousePosition from "@/components/MousePosition";
@@ -22,7 +21,6 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
-  console.log("LAOYUT RENDER");
   return (
     <html lang="en">
       <head>

@@ -23,6 +23,20 @@ const AnimatedImage = ({
   imageClassName,
   positionPercentageDivider = 1,
 }: Props) => {
+  // return (
+  //   <Image
+  //     src={url(src)}
+  //     width={width}
+  //     height={height}
+  //     alt={alt ?? ""}
+  //     className={
+  //       "w-full h-full object-cover rounded-lg  outline-[12px] outline-[#201F36] outline" +
+  //       " " +
+  //       imageClassName
+  //     }
+  //   />
+  // );
+
   useScrolling();
   const imageRef = useRef<HTMLImageElement>(null);
   const imgRect = imageRef.current?.getBoundingClientRect();
