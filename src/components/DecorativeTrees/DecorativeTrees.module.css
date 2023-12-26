@@ -1,5 +1,6 @@
 .decorTrees {
   transform-origin: center;
+  user-select: none;
 }
 
 .topleft {

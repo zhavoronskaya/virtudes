@@ -29,25 +29,41 @@ export function Loader() {
       style={styles}
     >
       {isLoaded && (
+        // <svg
+        //   xmlns="http://www.w3.org/2000/svg"
+        //   width="48"
+        //   viewBox="0 0 24 24"
+        //   fill="none"
+        //   stroke="#cbf0d0"
+        //   strokeWidth="2"
+        //   strokeLinecap="round"
+        //   strokeLinejoin="round"
+        //   className="inline-block animate-bounce infinite"
+        // >
+        //   <path d="M12 5v14" />
+        //   <path d="m19 12-7 7-7-7" />
+        // </svg>
         <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="48"
-          viewBox="0 0 24 24"
+          width="38"
+          height="38"
+          viewBox="0 0 38 38"
           fill="none"
-          stroke="#cbf0d0"
-          strokeWidth="2"
-          strokeLinecap="round"
-          strokeLinejoin="round"
+          xmlns="http://www.w3.org/2000/svg"
           className="inline-block animate-bounce infinite"
         >
-          <path d="M12 5v14" />
-          <path d="m19 12-7 7-7-7" />
+          <path
+            d="M19 1V37M19 37L37 19M19 37L1 19"
+            stroke="#FDF7FA"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
         </svg>
       )}
 
       {!isLoaded && (
         <span
-          className="lg:text-2xl text-xl flex items-center opacity-60"
+          className="lg:text-[24px]/[24px] sm:text-[20px]/[20px] text-[16px]/[16px] flex items-center opacity-60"
           style={{ height: "48px" }}
         >
           <span className="">Loading...</span>

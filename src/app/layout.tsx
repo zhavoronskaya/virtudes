@@ -8,8 +8,9 @@ import MousePosition from "@/components/MousePosition";
 import Scrolling from "@/components/Scrolling";
 import DecortiveTrees from "@/components/DecorativeTrees";
 import MainScene from "@/scenes/Virtudes";
+import { ThemeProvider } from "@/context/ThemeContext";
 
-const inter = Inter({ subsets: ["latin"] });
+// const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -21,6 +22,7 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
+  console.log("LAOYUT RENDER");
   return (
     <html lang="en">
       <head>
@@ -33,54 +35,46 @@ export default function RootLayout({
           href="https://api.fontshare.com/v2/css?f[]=melodrama@1&display=swap"
           rel="stylesheet"
         />
+
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link
-          href="https://api.fontshare.com/v2/css?f[]=lora&display=swap"
-          rel="stylesheet"
-        ></link>
+          rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossOrigin="anonymous"
+        />
         <link
-          href="https://api.fontshare.com/v2/css?f[]=karma&display=swap"
+          href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@200;300;400&display=swap"
           rel="stylesheet"
-        ></link>
-        <link
-          href="https://api.fontshare.com/v2/css?f[]=gambarino&display=swap"
-          rel="stylesheet"
-        ></link>
-        <link
-          href="https://api.fontshare.com/v2/css?f[]=erode&display=swap"
-          rel="stylesheet"
-        ></link>
-        <link
-          href="https://api.fontshare.com/v2/css?f[]=cabinet-grotesk&display=swap"
-          rel="stylesheet"
-        ></link>
+        />
       </head>
+
       <body>
-        <header className="fixed left-0 top-0 w-full z-10">
+        <ThemeProvider>
           <Header />
-        </header>
 
-        <main id="main" className="h-screen overflow-hidden p-0">
-          {/* <Filter /> */}
-          <Scrolling targetId="main">
-            <div id="canvas-wrapper" className="fixed h-full w-full z-0">
-              <Suspense>
-                <MousePosition>
-                  <MainScene />
-                </MousePosition>
-              </Suspense>
-            </div>
+          <main id="main" className="h-screen overflow-hidden p-0">
+            {/* <Filter /> */}
+            <Scrolling targetId="main">
+              <div id="canvas-wrapper" className="fixed h-full w-full z-0">
+                <Suspense>
+                  <MousePosition>
+                    <MainScene />
+                  </MousePosition>
+                </Suspense>
+              </div>
 
-            <div className="fixed h-full w-full z-0">
-              <DecortiveTrees />
-            </div>
+              <div className="fixed h-full w-full z-0">
+                <DecortiveTrees />
+              </div>
 
-            {children}
-          </Scrolling>
-        </main>
+              {children}
+            </Scrolling>
+          </main>
 
-        <footer className="fixed bottom-0 right-0 w-full z-10">
-          <Footer />
-        </footer>
+          <footer className="fixed bottom-0 right-0 w-full z-10 mix-blend-difference">
+            <Footer />
+          </footer>
+        </ThemeProvider>
       </body>
     </html>
   );

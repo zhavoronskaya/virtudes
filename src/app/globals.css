@@ -19,25 +19,34 @@
 body {
   overflow: hidden;
   /* font-family: "Melodrama", monospace; */
-  /* font-family: "Lora", sans-serif; */
-  /* font-family: 'Stardom', sans-serif; */
-/* font-family: 'Gambarino', serif; */
 
-font-family: 'Erode', serif;
-/* font-family: 'Karma', serif; */
+  font-weight: 300;
+  font-family: 'Source Sans 3', sans-serif;
 
-/* font-family: 'Cabinet Grotesk', sans-serif; */
-
-  background-color: #726472;
-  /* color: rgb(var(--foreground-rgb)); */
-  color: #cbf0d0;
-  /* color: red; */
+  background-color: #201F36;
+  color: #FDF7FA;
   cursor: url("/virtudes/icons/cursor.svg") 18 18, auto;
 }
+
+body.theme--light {
+  background-color: #979AAA;
+
+}
+body.theme--dark {
+  background-color: #201F36;
+}
+
 h2 {
 
-  /* font-family: 'Karma', serif; */
   font-family: "Melodrama", monospace;
+}
+
+li {
+
+
+    /* font-family: 'Karma', serif; */
+    font-family: "Melodrama", monospace;
+
 }
 
 a,

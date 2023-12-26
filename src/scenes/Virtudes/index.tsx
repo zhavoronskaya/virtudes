@@ -2,10 +2,13 @@
 import { Canvas } from "@react-three/fiber";
 
 import React, { Suspense } from "react";
-import { Sky, Sparkles } from "@react-three/drei";
+
 import ParqueModel from "./ParqueModel";
+import Environment from "./Environment";
 
 export default function MainScene() {
+  // const isDark = theme === "dark";
+
   return (
     <Canvas
       frameloop="demand"
@@ -21,23 +24,7 @@ export default function MainScene() {
         position: [42, 74, -4],
       }}
     >
-      <Sparkles
-        size={100}
-        speed={0.5}
-        scale={[1000, 1000, 1000]}
-        count={10000}
-      />
-
-      <Sky
-        azimuth={180}
-        turbidity={10}
-        rayleigh={1.7}
-        inclination={0.51} // change that!
-        distance={100000}
-        // sunPosition={[1000, 600, 1000]}
-        mieDirectionalG={0.7}
-        mieCoefficient={0.005}
-      />
+      <Environment />
 
       {/* <Suspense fallback="Loading..."> */}
       <ParqueModel />

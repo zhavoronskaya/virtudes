@@ -1,43 +1,56 @@
 .glass {
-  background: rgba(255, 255, 255, 0.2);
+  /* background: rgba(255, 255, 255, 0.2);
   border-radius: 16px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(5px);
   border: 1px solid rgba(255, 255, 255, 0.3);
+  padding: 4px; */
 }
 
 .burger {
-  width: 30px;
-  height: 40px;
+  width: 24px;
+  height: 24xpx;
   display: flex;
   flex-direction: column;
   gap: 4px;
   z-index: 100;
   position: absolute;
-  right: 32px;
-  top: 16px;
+  right: 24px;
+  top: 24px;
 }
 
 .burgerLine {
   display: block;
   height: 5px;
-  background-color: #cbf0d0;
+  background-color: #FDF7FA;
   width: 100%;
 }
 
 .header {
+
 }
 
-.header:global(.active) nav {
-  /* margin-left: 160px; */
-  height: 100vh;
-  visibility: visible !important;
-  border-radius: 8px;
-  background-color: #928586b8;
-  font-size: 3.75rem;
-  line-height: 1;
+.header li {
+  transition-duration: 0.2s;
+  transition-timing-function: ease;
+  transition-property: transform, opacity;
+  transform: translate(100%,0);
+  opacity: 0;
 }
 
-.header:global(.active) nav ul {
-  display: block !important;
+.header:global(.active) li {
+  transform: translate(0,0);
+  opacity: 1;
 }
+
+.header:global(.active) li:nth-child(1) { transition-delay: 0.0s;}
+.header:global(.active) li:nth-child(2) { transition-delay: 0.05s;}
+.header:global(.active) li:nth-child(3) { transition-delay: 0.10s;}
+.header:global(.active) li:nth-child(4) { transition-delay: 0.15s;}
+.header:global(.active) li:nth-child(5) { transition-delay: 0.20s;}
+
+
+
+
+
+
