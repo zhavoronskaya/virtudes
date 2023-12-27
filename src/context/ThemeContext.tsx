@@ -25,10 +25,7 @@ type ProviderProps = {
 };
 
 export const ThemeProvider = ({ children }: ProviderProps) => {
-  const [theme, setTheme] = React.useState(() => {
-    const theme = "dark" as Theme;
-    return theme;
-  });
+  const [theme, setTheme] = React.useState<Theme>("dark");
 
   const toggleTheme = () => {
     const val = theme === "light" ? "dark" : "light";

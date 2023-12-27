@@ -17,29 +17,11 @@ type Props = {
 
 const INITIAL_POS = cameraMap[0];
 
-function worldPointFromScreenPoint(screenPoint: THREE.Vector2, camera: Camera) {
-  let worldPoint = new THREE.Vector3();
-  worldPoint.x = screenPoint.x;
-  worldPoint.y = screenPoint.y;
-  worldPoint.z = 0;
-  worldPoint.unproject(camera);
-  return worldPoint;
-}
-
-const handleCamera = (
-  camera: Camera,
-  pos: THREE.Vector3,
-  lookAt: THREE.Vector3
-) => {
-  camera.position.set(pos.x, pos.y, pos.z);
-  camera.lookAt(lookAt.x, lookAt.y, lookAt.z);
-  camera.updateProjectionMatrix();
-};
-
 function Model(props: Props) {
   const groupRef = React.useRef<THREE.Group>(null!);
   // const lightRef = React.useRef<THREE.SpotLight>(null!);
   const lightRef = React.useRef<THREE.PointLight>(null!);
+  const mouse3dPos = React.useRef(new THREE.Vector3());
   const prevOffset = React.useRef(0);
   const traversed = React.useRef(false);
   const childMaterial = React.useRef(new THREE.MeshBasicMaterial());
@@ -60,22 +42,21 @@ function Model(props: Props) {
   // const helper = useHelper(camera, THREE.CameraHelper);
 
   React.useEffect(() => {
-    camera.position.set(
-      INITIAL_POS.position.x,
-      INITIAL_POS.position.y,
-      INITIAL_POS.position.z
-    );
-    camera.lookAt(INITIAL_POS.lookAt);
-    camera.updateProjectionMatrix();
+    // camera.position.set(
+    //   INITIAL_POS.position.x,
+    //   INITIAL_POS.position.y,
+    //   INITIAL_POS.position.z
+    // );
+    // camera.lookAt(INITIAL_POS.lookAt);
+    // camera.updateProjectionMatrix();
   }, []);
 
   suspend(async () => {
     if (traversed.current) return;
     if (!gltf || !gltf.scene) return;
-    let c = 0;
+
     gltf.scene.traverse((child: any) => {
       if (child.name === "Scene") return;
-      c++;
       child.material = childMaterial.current.clone();
 
       const childTexture = childTexturesMap?.[child.name];
@@ -90,43 +71,37 @@ function Model(props: Props) {
         child.material.color = new THREE.Color("#f5c3f1");
       }
     });
-    console.log("ccc", c);
+
     traversed.current = true;
   }, [gltf, childTexturesMap]);
 
   const handleMouse = (camera: Camera) => {
-    let worldPoint = new THREE.Vector3();
     if (mousePos) {
-      worldPoint.x = mousePos.x;
-      worldPoint.y = mousePos.y;
-      worldPoint.z = 0;
-      worldPoint.unproject(camera);
+      mouse3dPos.current.x = mousePos.x;
+      mouse3dPos.current.y = mousePos.y;
+      mouse3dPos.current.z = 0;
+      mouse3dPos.current.unproject(camera);
     }
-    return worldPoint;
+    return mouse3dPos.current;
   };
 
-  const _handleCameraOld = (
+  const handleCamera = (
     camera: Camera,
     pos: THREE.Vector3,
-    lookAt: THREE.Vector3,
-    screen3dPos: THREE.Vector3
+    lookAt: THREE.Vector3
   ) => {
     camera.position.set(pos.x, pos.y, pos.z);
     camera.lookAt(lookAt.x, lookAt.y, lookAt.z);
     camera.updateProjectionMatrix();
 
     if (mousePos) {
-      camera.position.lerpVectors(camera.position, screen3dPos, 0.7);
-      // camera.position.x = THREE.MathUtils.lerp(
-      //   camera.position.x,
-      //   my3dPosition.x,
-      //   0.03
+      let mouse3dPos = handleMouse(camera);
+      camera.position.lerpVectors(camera.position, mouse3dPos, 10);
+      // camera.rotation.y = THREE.MathUtils.lerp(
+      //   camera.rotation.y,
+      //   mouse3dPos.x * -Math.PI * 0.025,
+      //   0.1
       // );
-      camera.rotation.y = THREE.MathUtils.lerp(
-        camera.rotation.y,
-        screen3dPos.x * -Math.PI * 0.025,
-        0.05
-      );
     }
   };
 
@@ -154,32 +129,24 @@ function Model(props: Props) {
 
   useFrame((state, delta) => {
     const offset = scrolling.offset;
-    const isOffsetChanged = offset !== prevOffset.current;
+    // const isOffsetChanged = offset !== prevOffset.current;
+
+    const firstLargestIndex = cameraMap.findIndex((v) => v.offset >= offset);
+    const startPos = cameraMap[firstLargestIndex - 1];
+    const endPos = cameraMap[firstLargestIndex];
+
+    if (!startPos || !endPos) return;
+
+    const interval =
+      (offset - startPos.offset) / (endPos.offset - startPos.offset);
 
     let pos = new THREE.Vector3();
     let look = new THREE.Vector3();
-    let mouse3dPos = handleMouse(camera);
-    // console.log("POINT", mouse3dPos);
+    pos = pos.lerpVectors(startPos.position, endPos.position, interval);
+    look = look.lerpVectors(startPos.lookAt, endPos.lookAt, interval);
+    handleCamera(state.camera, pos, look);
 
-    // if (isOffsetChanged)
-    {
-      const firstLargestIndex = cameraMap.findIndex((v) => v.offset >= offset);
-      const startPos = cameraMap[firstLargestIndex - 1];
-      const endPos = cameraMap[firstLargestIndex];
-
-      if (!startPos || !endPos) return;
-
-      const interval =
-        (offset - startPos.offset) / (endPos.offset - startPos.offset);
-
-      pos = pos.lerpVectors(startPos.position, endPos.position, interval);
-      look = look.lerpVectors(startPos.lookAt, endPos.lookAt, interval);
-
-      // handleCamera(state.camera, pos, look);
-      _handleCameraOld(state.camera, pos, look, mouse3dPos);
-
-      // handleLight(pos, look, mouse3dPos);
-    }
+    // handleLight(pos, look, mouse3dPos);
 
     prevOffset.current = offset;
   });
@@ -193,4 +160,4 @@ function Model(props: Props) {
 
 export default React.memo(Model);
 
-useGLTF.preload(url("/model/VirtudasNew.glb"));
+// useGLTF.preload(url("/model/VirtudasNew.glb"));

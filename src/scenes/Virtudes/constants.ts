@@ -80,10 +80,15 @@ export const cameraMovingMap: CameraMap[] = [
     lookAt: new THREE.Vector3(56, 0, -38),
   },
   // {
-  //   offset: 0.05,
+  //   offset: 0.07,
   //   position: new THREE.Vector3(27, 94, -4),
   //   lookAt: new THREE.Vector3(37, 68, -5),
   // },
+  {
+    offset: 0.07,
+    position: new THREE.Vector3(-19.8, 74.4, 34.9),
+    lookAt: new THREE.Vector3(56, 0, -38),
+  },
   {
     offset: 0.1,
     position: new THREE.Vector3(37, 80, -12),

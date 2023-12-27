@@ -55,7 +55,7 @@ const AnimatedImage = ({
         imageClassName
       }
       style={{
-        objectPosition: `50% ${percentage / positionPercentageDivider}%`,
+        objectPosition: `50% ${100 - percentage / positionPercentageDivider}%`,
       }}
     />
   );

@@ -29,9 +29,11 @@ body {
 }
 
 body.theme--light {
-  background-color: #979AAA;
-
+  background-color: #8D909D;
+  /* color: #FFF; */
 }
+
+
 body.theme--dark {
   background-color: #201F36;
 }
@@ -66,23 +68,28 @@ a,
   visibility: visible;
 }
 
-#canvas-wrapper {
-  opacity: 0;
-  transition: opacity 1s;
-  /* position: relative; */
-  /* filter: url("#sea");
-  -webkit-filter: url("#sea"); */
+#main.loaded #canvas-wrapper-inner {
+  opacity: 1; 
 }
 
-#canvas-wrapper::after {
-  content: "";
+#canvas-wrapper-inner {
+  opacity: 0;
+  transition: opacity 2s ease;
+}
+
+#canvas-wrapper-color-overlay {
   display: block;
   position: absolute;
   inset: 0;
-  background-color: rgb(43, 24, 69);
-  opacity: 0.3;
+  transition: background-color .3s;
+  background-color: rgba(43, 24, 69, 0.3);
+
 }
 
-#main.loaded #canvas-wrapper {
-  opacity: 1;
+body.theme--light #canvas-wrapper-color-overlay {
+  background-color: rgba(10, 88, 127, 0.1)
 }
+
+
+
+

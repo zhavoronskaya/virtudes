@@ -54,11 +54,15 @@ export default function RootLayout({
             {/* <Filter /> */}
             <Scrolling targetId="main">
               <div id="canvas-wrapper" className="fixed h-full w-full z-0">
-                <Suspense>
-                  <MousePosition>
-                    <MainScene />
-                  </MousePosition>
-                </Suspense>
+                <div id="canvas-wrapper-inner" className="h-full w-full z-0">
+                  <Suspense>
+                    <MousePosition>
+                      <MainScene />
+                    </MousePosition>
+                  </Suspense>
+                </div>
+
+                <div id="canvas-wrapper-color-overlay" />
               </div>
 
               <div className="fixed h-full w-full z-0">

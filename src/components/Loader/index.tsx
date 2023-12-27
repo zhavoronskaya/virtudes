@@ -29,23 +29,8 @@ export function Loader() {
       style={styles}
     >
       {isLoaded && (
-        // <svg
-        //   xmlns="http://www.w3.org/2000/svg"
-        //   width="48"
-        //   viewBox="0 0 24 24"
-        //   fill="none"
-        //   stroke="#cbf0d0"
-        //   strokeWidth="2"
-        //   strokeLinecap="round"
-        //   strokeLinejoin="round"
-        //   className="inline-block animate-bounce infinite"
-        // >
-        //   <path d="M12 5v14" />
-        //   <path d="m19 12-7 7-7-7" />
-        // </svg>
         <svg
-          width="38"
-          height="38"
+          height="24"
           viewBox="0 0 38 38"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"

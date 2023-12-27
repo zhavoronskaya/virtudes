@@ -31,7 +31,7 @@ export default function Home() {
         {/* Magic garden */}
         <div
           id="home"
-          className="grid grid-cols-6 sm:grid-cols-12 sm:gap-6 gap-3  auto-rows-[32px] sm:auto-rows-[64px] mt-24"
+          className="grid grid-cols-6 sm:grid-cols-12 sm:gap-6 gap-3  auto-rows-[32px] sm:auto-rows-[64px] "
         >
           <div className="lg:col-start-2 lg:col-span-10 lg:row-start-1 lg:row-end-5 sm:col-start-2 sm:col-span-10 sm:row-start-1 sm:row-end-4 col-start-2 col-span-5 row-start-1 row-end-4 relative z-20">
             <h2 className="lg:text-[192px]/[164px] sm:text-[120px]/[96px] text-[60px]/[48px] font-extrabold  uppercase ">
