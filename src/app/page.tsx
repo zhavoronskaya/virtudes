@@ -387,10 +387,10 @@ export default function Home() {
           </div>
           <div className="lg:col-start-10 lg:col-span-3 lg:row-start-[12] sm:col-start-9 sm:col-span-4 sm:row-start-[11] sm:row-end-[12] col-start-5 col-span-2 row-start-[14] row-end-[15] relative">
             <span className="lg:text-[32px]/[28px] sm:text-[24px]/[20px] text-[16px]/[12px]  opacity-50 absolute bottom-[100%] hover:opacity-100">
-              1957
+              1959
             </span>
             <span className="lg:text-[56px]/[56px] sm:text-[36px]/[36px] text-[20px]/[20px] whitespace-nowrap overflow-hidden block text-ellipsis">
-              Vítor Ribeiro
+              Paulo Neves
             </span>
           </div>
           <div className="lg:col-start-2 lg:col-span-5 lg:row-start-[13] sm:col-start-2 sm:col-span-5 sm:row-start-[12] sm:row-end-[13] col-start-2 col-span-3 row-start-[15] row-end-[16] relative">
@@ -407,10 +407,10 @@ export default function Home() {
           </div>
           <div className="lg:col-start-9 lg:col-span-4 lg:row-start-[14] lg:row-end-[15] sm:col-start-8 sm:col-span-5 sm:row-start-[13] sm:row-end-[14] col-start-2 col-span-4 row-start-[9] row-end-[10] relative">
             <span className="lg:text-[32px]/[28px] sm:text-[24px]/[20px] text-[16px]/[12px] opacity-50 absolute bottom-[100%] hover:opacity-100">
-              1959
+              1957
             </span>
             <span className="lg:text-[56px]/[56px] sm:text-[36px]/[36px] text-[20px]/[20px]">
-              Paulo Neves
+              Vítor Ribeiro
             </span>
           </div>
         </div>
