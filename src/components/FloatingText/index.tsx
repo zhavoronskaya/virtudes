@@ -28,7 +28,7 @@ const FloatingText = ({ id, children }: Props) => {
           <span
             key={letter + idx}
             className={`letter letter-${idx + 1}`}
-            style={{ animationDelay: +idx * 0.01 + "s" }}
+            style={{ transitionDelay: +idx * 0.01 + "s" }}
           >
             {letter === " " ? <>&nbsp;</> : letter}
           </span>

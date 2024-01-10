@@ -515,12 +515,10 @@ export default function Home() {
               className="inline-block w-full h-full "
             >
               <div className="relative z-10 w-full h-full  ">
-                <Image
-                  width="2624"
-                  height="1334"
-                  alt=""
-                  className="object-cover relative  w-full h-full rounded-lg outline-[12px] outline-[#201F36] outline bg-[#201F36] opacity-100"
-                  src={url("/image/mapa.png")}
+                <AnimatedImage
+                  width={2624}
+                  height={1334}
+                  src={"/image/mapa.png"}
                 />
 
                 {/* <Image

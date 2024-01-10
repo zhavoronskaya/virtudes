@@ -1,4 +1,4 @@
-@keyframes floating {
+/* @keyframes floating {
   100% {
     opacity: 1;
     transform: translate(0,0);
@@ -16,6 +16,22 @@
   animation-timing-function: cubic-bezier(.71,.12,.27,.96);
   animation-fill-mode: forwards;
   animation-name: floating;
+} */
+
+.floatingText :global(.letter) {
+  display: inline-block;
+  transition-duration: 0.4s;
+  transition-timing-function: cubic-bezier(.71,.12,.27,.96);
+  transition-property: transform, opacity;
+  transform: translate(0,100%);
+  opacity: 0;
 }
+
+.floatingText:global(.active) :global(.letter) {
+
+  transform: translate(0,0);
+  opacity: 1;
+}
+
 
 
