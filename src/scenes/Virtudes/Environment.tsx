@@ -71,7 +71,7 @@ export default function Environment() {
         speed={0.5}
         scale={1000}
         count={10000}
-        color={"#f5e58c"}
+        color={theme === "dark" ? "#f5e58c" : "#e2f8eb"}
       />
 
       <Sky

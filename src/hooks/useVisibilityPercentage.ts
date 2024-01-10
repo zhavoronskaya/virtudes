@@ -8,13 +8,13 @@ export default function useVisibilityPercentage(rect: DOMRect | undefined) {
   const viewportHeight = windowBounds.height;
 
   if (rect.top > viewportHeight) {
-    // If we haven't reached the image yet
+    // If we haven't reached the elem yet
     return 0;
   } else if (rect.bottom < 0) {
-    // If we've completely scrolled past the image
+    // If we've completely scrolled past the elem
     return 100;
   } else {
-    // When the image is in the viewport
+    // When the elem is in the viewport
     const distance = viewportHeight - rect.top;
     return distance / ((viewportHeight + rect.height) / 100);
   }

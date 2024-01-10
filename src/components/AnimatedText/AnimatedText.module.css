@@ -1,0 +1,12 @@
+.wrapper {
+  display: inline-block;
+}
+
+.wrapper :global(.line) {
+  clip-path: inset(0 100% 0 0);
+}
+
+.wrapper:global(.active) :global(.line) {
+  clip-path: inset(0 0 0 0);
+  /* animation-timing-function: cubic-bezier(.06,.67,.92,.35); */
+}

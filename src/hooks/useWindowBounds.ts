@@ -13,10 +13,10 @@ export default function useWindowBounds() {
 
     setWindowBounds();
 
-    // window.addEventListener("resize", setWindowBounds);
-    // return () => {
-    //   window.removeEventListener("resize", setWindowBounds);
-    // };
+    window.addEventListener("resize", setWindowBounds);
+    return () => {
+      window.removeEventListener("resize", setWindowBounds);
+    };
   }, []);
 
   return { width, height };

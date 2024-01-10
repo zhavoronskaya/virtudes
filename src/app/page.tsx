@@ -1,11 +1,12 @@
 import Image from "next/image";
-import FadingText from "@/components/FadingText";
-import FlexImageGallery from "@/components/FlexImageGallery";
 import url from "@/helpers/url";
 import DecorativeTitle from "@/components/DecorativeTitle";
 import { Loader } from "@/components/Loader";
 import DecorativeLines from "@/components/DecorativeLines";
 import AnimatedImage from "@/components/AnimatedImage";
+import AnimatedText from "@/components/AnimatedText";
+import AnimatedTitle from "@/components/AnimatedTitle";
+import FloatingText from "@/components/FloatingText";
 
 export default function Home() {
   return (
@@ -35,8 +36,8 @@ export default function Home() {
         >
           <div className="lg:col-start-2 lg:col-span-10 lg:row-start-1 lg:row-end-5 sm:col-start-2 sm:col-span-10 sm:row-start-1 sm:row-end-4 col-start-2 col-span-5 row-start-1 row-end-4 relative z-20">
             <h2 className="lg:text-[192px]/[164px] sm:text-[120px]/[96px] text-[60px]/[48px] font-extrabold  uppercase ">
-              Magic <br />
-              Garden
+              <AnimatedTitle>Magic</AnimatedTitle> <br />
+              <AnimatedTitle delay={0.5}>Garden</AnimatedTitle>
             </h2>
             <span className="lg:text-[32px]/[28px] sm:text-[24px]/[20px] text-[16px]/[12px]  opacity-50 absolute bottom-[100%] sm:left-[-10.5%] left-[-21%] hover:opacity-100 ">
               Brings beauty to your life
@@ -75,10 +76,10 @@ export default function Home() {
             </p>
           </div>
           <div className="lg:col-start-8 lg:col-span-4 lg:row-start-[13] lg:row-end-[16] sm:col-start-6 sm:col-span-7 sm:row-start-[9] sm:row-end-[11] col-start-2 col-span-5 row-start-[11] row-end-[12]">
-            <p className="lg:text-[36px]/[36px] sm:text-[28px]/[28px] text-[20px]/[20px]">
+            <AnimatedText className="lg:text-[36px]/[40px] sm:text-[28px]/[32px] text-[20px]/[24px]">
               As landscape gardener, he left a timeless tribute to nature
               through the roses, camellias, and palms he cultivated.
-            </p>
+            </AnimatedText>
           </div>
         </div>
 
@@ -97,7 +98,8 @@ export default function Home() {
               Lush Greenery
             </span>
             <h2 className="lg:text-[192px]/[164px] sm:text-[120px]/[96px] text-[60px]/[48px] font-extrabold  uppercase">
-              Natural <br /> Beauty
+              <AnimatedTitle>Natural</AnimatedTitle> <br />{" "}
+              <AnimatedTitle delay={0.7}>Beauty</AnimatedTitle>
             </h2>
           </div>
           <div className="sm:col-start-3 sm:col-span-7 lg:row-start-5 lg:row-end-[12] sm:row-start-3 sm:row-end-[9] col-start-1 col-span-4 row-start-3 row-end-[7] z-10">
@@ -113,18 +115,18 @@ export default function Home() {
             </span>
           </div>
           <div className="lg:col-start-8 lg:col-span-5 lg:row-start-[11] lg:row-end-[14] sm:col-start-7 sm:col-span-6 sm:row-start-[8] sm:row-end-[12] col-start-3 col-span-4 row-start-[8] row-end-[11] z-20 ">
-            <p className="lg:text-[36px]/[36px] sm:text-[28px]/[28px] text-[20px]/[20px]">
+            <AnimatedText className="lg:text-[36px]/[40px] sm:text-[28px]/[32px] text-[20px]/[24px]">
               The abundant trees, flowers, and shrubs that flourish within the
               confines of Parque das Virtudes collectively form a lush and
               vibrant tapestry of nature&#39;s splendor.
-            </p>
+            </AnimatedText>
           </div>
           <div className="lg:col-start-4 lg:col-span-5 lg:row-start-[15] lg:row-end-[19] sm:col-start-2 sm:col-span-7 sm:row-start-[11] sm:row-end-[14] col-start-1 col-span-4 row-start-[13] row-end-[15] z-10 ">
-            <p className="lg:text-[36px]/[36px] sm:text-[28px]/[28px] text-[20px]/[20px]">
+            <AnimatedText className="lg:text-[36px]/[40px] sm:text-[28px]/[32px] text-[20px]/[24px]">
               This verdant treasure trove of botanical diversity not only
               enhances the park&#39;s visual appeal but also creates a deeply
               immersive and harmonious atmosphere for all who venture within.
-            </p>
+            </AnimatedText>
           </div>
         </div>
 
@@ -147,7 +149,7 @@ export default function Home() {
               1 ha area
             </span>
             <h2 className="lg:text-[192px]/[164px] sm:text-[120px]/[96px] text-[60px]/[48px] font-extrabold  uppercase">
-              Flora
+              <AnimatedTitle>Flora</AnimatedTitle>
             </h2>
           </div>
 
@@ -175,18 +177,18 @@ export default function Home() {
             </span>
           </div>
           <div className="lg:col-start-7 lg:col-span-5 lg:row-start-[12] lg:row-end-[14] sm:col-start-7 sm:col-span-5 sm:row-start-[11] sm:row-end-[14] col-start-1 col-span-4 row-start-[12] row-end-[14] z-20 ">
-            <p className="lg:text-[36px]/[36px] sm:text-[28px]/[28px] text-[20px]/[20px]">
+            <AnimatedText className="lg:text-[36px]/[40px] sm:text-[28px]/[32px] text-[20px]/[20px]">
               This location is home to Portugal&#39;s largest Ginkgo Biloba
               tree, dating back to the 18th century and originally hailing from
               China.
-            </p>
+            </AnimatedText>
           </div>
           <div className="lg:col-start-2 lg:col-span-6 lg:row-start-[15] lg:row-end-[18] sm:col-start-2 sm:col-span-5 sm:row-start-[14] sm:row-end-[18] col-start-4 col-span-3 row-start-[16] row-end-[19] z-10 ">
-            <p className="lg:text-[36px]/[36px] sm:text-[28px]/[28px] text-[20px]/[20px]">
+            <AnimatedText className="lg:text-[36px]/[40px] sm:text-[28px]/[32px] text-[20px]/[20px]">
               This majestic tree stands at an impressive height of approximately
               35 meters and was officially recognized as a tree of public
               interest by the General Directorate of Forestry in January 2005.
-            </p>
+            </AnimatedText>
           </div>
         </div>
 
@@ -202,8 +204,9 @@ export default function Home() {
               Unparalleled overlooks
             </span>
             <h2 className="lg:text-[192px]/[164px] sm:text-[120px]/[96px] text-[60px]/[48px] font-extrabold  uppercase">
-              UNIQUE <br />
-              OVERVIEW
+              <AnimatedTitle>UNIQUE </AnimatedTitle>
+              <br />
+              <AnimatedTitle delay={0.6}>OVERVIEW </AnimatedTitle>
             </h2>
           </div>
           <div className="sm:col-start-2 sm:col-span-7 lg:row-start-2 lg:row-end-[9] sm:row-start-2 sm:row-end-[8] col-start-1 col-span-5 row-start-2 row-end-[7]">
@@ -238,11 +241,11 @@ export default function Home() {
             </span>
           </div>
           <div className="lg:col-start-3 lg:col-span-4 lg:row-start-[12] lg:row-end-[15] sm:col-start-2 sm:col-span-4 sm:row-start-[11] sm:row-end-[16] col-start-2 col-span-5 row-start-[19] row-end-[23] ">
-            <p className="lg:text-[36px]/[36px] sm:text-[28px]/[28px] text-[20px]/[20px]">
+            <AnimatedText className="lg:text-[36px]/[40px] sm:text-[28px]/[32px] text-[20px]/[20px]">
               One of Porto&#39;s iconic landmarks, the Customs House, is often
               visible from the park. This historic building, with its
               distinctive architecture, adds to the scenic charm of the park.
-            </p>
+            </AnimatedText>
           </div>
 
           <div className="lg:col-start-3 lg:col-span-5 lg:row-start-[17] lg:row-end-[18] sm:col-start-2 sm:col-span-4 sm:row-start-[16] sm:row-end-[17] col-start-1 col-span-4 row-start-[25] row-end-[25]  relative">
@@ -255,12 +258,12 @@ export default function Home() {
           </div>
 
           <div className="lg:col-start-4 lg:col-span-4 lg:row-start-[18] lg:row-end-[23] sm:col-start-3 sm:col-span-5 sm:row-start-[17] sm:row-end-[22] col-start-2 col-span-5 row-start-[26] row-end-[30] ">
-            <p className="lg:text-[36px]/[36px] sm:text-[28px]/[28px] text-[20px]/[20px]">
+            <AnimatedText className="lg:text-[36px]/[40px] sm:text-[28px]/[32px] text-[20px]/[20px]">
               While not directly overlooking the river, the park&#39;s elevated
               position provides glimpses of the Douro River, especially as it
               winds its way through the city. The views of the river can be
               particularly enchanting during sunrise and sunset.
-            </p>
+            </AnimatedText>
           </div>
           <div className="lg:col-start-4 lg:col-span-7 lg:row-start-[25] lg:row-end-[26] sm:col-start-4 sm:col-span-7 sm:row-start-[22] sm:row-end-[23] col-start-1 col-span-6 row-start-[33] row-end-[34] relative">
             <span className="lg:text-[32px]/[28px] sm:text-[24px]/[20px] text-[16px]/[12px]  opacity-50 absolute bottom-[100%] hover:opacity-100">
@@ -272,11 +275,11 @@ export default function Home() {
             </span>
           </div>
           <div className="lg:col-start-5 lg:col-span-5 lg:row-start-[26] lg:row-end-[29] sm:col-start-5 sm:col-span-7 sm:row-start-[23] sm:row-end-[26] col-start-2 col-span-5 row-start-[34] row-end-[38]">
-            <p className="lg:text-[36px]/[36px] sm:text-[28px]/[28px] text-[20px]/[20px]">
+            <AnimatedText className="lg:text-[36px]/[40px] sm:text-[28px]/[32px] text-[20px]/[20px]">
               Across the Douro River, you can see the charming district of Vila
               Nova de Gaia. This area is known for its wine cellars and colorful
               buildings lining the riverfront.
-            </p>
+            </AnimatedText>
           </div>
         </div>
 
@@ -287,13 +290,14 @@ export default function Home() {
           <div className="sm:col-start-4 sm:col-span-5 lg:row-start-1 lg:row-end-[9] sm:row-start-1 sm:row-end-[7] col-start-2 col-span-4 row-start-1 row-end-[8]">
             <AnimatedImage src={"/image/pool.jpeg"} width={720} height={1280} />
           </div>
-          <div className="lg:col-start-1 lg:col-span-6 lg:row-start-3 lg:row-end-[7] sm:col-start-1 sm:col-span-6 sm:row-start-3 sm:row-end-[7] col-start-1 col-span-5 row-start-2 row-end-[5] relative">
+          <div className="lg:col-start-1 lg:col-span-7 lg:row-start-3 lg:row-end-[7] sm:col-start-1 sm:col-span-8 sm:row-start-3 sm:row-end-[7] col-start-1 col-span-5 row-start-2 row-end-[5] relative">
             <span className="lg:text-[32px]/[28px] sm:text-[24px]/[20px] text-[16px]/[12px]  opacity-50 absolute bottom-[100%] hover:opacity-100">
               Gentle Serenity
             </span>
             <h2 className="lg:text-[192px]/[164px] sm:text-[120px]/[96px] text-[60px]/[48px] font-extrabold  uppercase">
-              Hidden <br />
-              Oasis
+              <AnimatedTitle>Hidden </AnimatedTitle>
+              <br />
+              <AnimatedTitle delay={0.6}>Oasis</AnimatedTitle>
             </h2>
           </div>
           <div className="sm:col-start-7 sm:col-span-5 lg:row-start-6 lg:row-end-[11] sm:row-start-5 sm:row-end-[9] col-start-4 col-span-4 row-start-5 row-end-[9] z-10">
@@ -309,18 +313,18 @@ export default function Home() {
             </span>
           </div>
           <div className="lg:col-start-3 lg:col-span-6 lg:row-start-[14] lg:row-end-[17] sm:col-start-3 sm:col-span-7 sm:row-start-[12] sm:row-end-[15] col-start-1 col-span-4 row-start-[14] row-end-[20] ">
-            <p className="lg:text-[36px]/[36px] sm:text-[28px]/[28px] text-[20px]/[20px]">
+            <AnimatedText className="lg:text-[36px]/[40px] sm:text-[28px]/[32px] text-[20px]/[20px]">
               Nestled within the historic heart of Porto, along Rua de Azevedo
               de Albuquerque, the Parque das Virtudes, formerly known as the
               Companhia Hortícola Portuense, found its new stewardship in 1965
               when it was acquired by the Porto City Council.
-            </p>
+            </AnimatedText>
           </div>
           <div className="lg:col-start-7 lg:col-span-5 lg:row-start-[18] lg:row-end-[20] sm:col-start-6 sm:col-span-6 sm:row-start-[16] sm:row-end-[18] col-start-3 col-span-4 row-start-[21] row-end-[24] z-10 ">
-            <p className="lg:text-[36px]/[36px] sm:text-[28px]/[28px] text-[20px]/[20px]">
+            <AnimatedText className="lg:text-[36px]/[40px] sm:text-[28px]/[32px] text-[20px]/[20px]">
               Substantial restoration efforts were undertaken in 1998 to
               preserve and enhance this cherished space.
-            </p>
+            </AnimatedText>
           </div>
         </div>
 
@@ -344,8 +348,8 @@ export default function Home() {
               and
             </span> */}
             <h2 className="lg:text-[192px]/[164px] sm:text-[112px]/[96px] text-[52px]/[48px] font-extrabold whitespace-nowrap overflow-hidden block text-ellipsis uppercase">
-              SCULPTURE <br />
-              ARCHITECTURE
+              <AnimatedTitle>SCULPTURE</AnimatedTitle> <br />
+              <AnimatedTitle delay={0.9}> ARCHITECTURE</AnimatedTitle>
             </h2>
           </div>
           {/* <div className="lg:col-start-1 lg:col-span-12 lg:row-start-4 lg:row-end-6 sm:col-start-1 sm:col-span-12 sm:row-start-3 sm:row-end-[4] col-start-1 col-span-6 row-start-3 row-end-[4]  z-10">
@@ -358,7 +362,7 @@ export default function Home() {
               2013
             </span>
             <span className="lg:text-[56px]/[56px] sm:text-[36px]/[36px] text-[20px]/[20px] ">
-              A meio entre isto e aquilo
+              <FloatingText>A meio entre isto e aquilo</FloatingText>
             </span>
           </div>
           <div className="lg:col-start-8 lg:col-span-5 lg:row-start-[9] sm:col-start-7 sm:col-span-6 sm:row-start-[8] sm:row-end-[9] col-start-1 col-span-4 row-start-[11] row-end-[12] relative">
@@ -366,7 +370,7 @@ export default function Home() {
               1972
             </span>
             <span className="lg:text-[56px]/[56px] sm:text-[36px]/[36px] text-[20px]/[20px]">
-              Isaque Pinheiro
+              <FloatingText>Isaque Pinheiro</FloatingText>
             </span>
           </div>
           <div className="lg:col-start-3 lg:col-span-4 lg:row-start-[10] sm:col-start-3 sm:col-span-4 sm:row-start-[9] sm:row-end-[10] col-start-5 col-span-2 row-start-[12] row-end-[13] relative">
@@ -374,7 +378,7 @@ export default function Home() {
               2013
             </span>
             <span className="lg:text-[56px]/[56px] sm:text-[36px]/[36px] text-[20px]/[20px]">
-              Roda
+              <FloatingText>Roda</FloatingText>
             </span>
           </div>
           <div className="lg:col-start-5 lg:col-span-7 lg:row-start-[11] sm:col-start-5 sm:col-span-7 sm:row-start-[10] sm:row-end-[11] col-start-4 col-span-3 row-start-[10] row-end-[11] relative">
@@ -382,7 +386,7 @@ export default function Home() {
               2013
             </span>
             <span className="lg:text-[56px]/[56px] sm:text-[36px]/[36px] text-[20px]/[20px] whitespace-nowrap overflow-hidden block text-ellipsis">
-              Árvore das Virtudes
+              <FloatingText>Árvore das Virtudes</FloatingText>
             </span>
           </div>
           <div className="lg:col-start-10 lg:col-span-3 lg:row-start-[12] sm:col-start-9 sm:col-span-4 sm:row-start-[11] sm:row-end-[12] col-start-5 col-span-2 row-start-[14] row-end-[15] relative">
@@ -390,7 +394,7 @@ export default function Home() {
               1959
             </span>
             <span className="lg:text-[56px]/[56px] sm:text-[36px]/[36px] text-[20px]/[20px] whitespace-nowrap overflow-hidden block text-ellipsis">
-              Paulo Neves
+              <FloatingText>Paulo Neves</FloatingText>
             </span>
           </div>
           <div className="lg:col-start-2 lg:col-span-5 lg:row-start-[13] sm:col-start-2 sm:col-span-5 sm:row-start-[12] sm:row-end-[13] col-start-2 col-span-3 row-start-[15] row-end-[16] relative">
@@ -402,7 +406,7 @@ export default function Home() {
               National Monument by Royal order of D. Manuel II of 23-06-1910
             </span>
             <span className="lg:text-[56px]/[56px] sm:text-[36px]/[36px] text-[20px]/[20px] whitespace-nowrap">
-              Chafariz das Virtudes
+              <FloatingText>Chafariz das Virtudes</FloatingText>
             </span>
           </div>
           <div className="lg:col-start-9 lg:col-span-4 lg:row-start-[14] lg:row-end-[15] sm:col-start-8 sm:col-span-5 sm:row-start-[13] sm:row-end-[14] col-start-2 col-span-4 row-start-[9] row-end-[10] relative">
@@ -410,7 +414,7 @@ export default function Home() {
               1957
             </span>
             <span className="lg:text-[56px]/[56px] sm:text-[36px]/[36px] text-[20px]/[20px]">
-              Vítor Ribeiro
+              <FloatingText>Vítor Ribeiro</FloatingText>
             </span>
           </div>
         </div>
@@ -419,12 +423,12 @@ export default function Home() {
 
         {/* Explore */}
         <div className="grid grid-cols-6 sm:grid-cols-12 sm:gap-6 gap-3  auto-rows-[32px] sm:auto-rows-[64px] mt-48 ">
-          <div className="lg:col-start-1 lg:col-span-7 lg:row-start-1 lg:row-end-[3] sm:col-start-1 sm:col-span-8 sm:row-start-[1] sm:row-end-[3] col-start-1 col-span-6 row-start-[1] row-end-[2] relative">
+          <div className="lg:col-start-1 lg:col-span-8 lg:row-start-1 lg:row-end-[3] sm:col-start-1 sm:col-span-9 sm:row-start-[1] sm:row-end-[3] col-start-1 col-span-6 row-start-[1] row-end-[2] relative">
             <span className="lg:text-[32px]/[28px] sm:text-[24px]/[20px] text-[16px]/[12px]  opacity-50 absolute bottom-[100%] hover:opacity-100">
               The Sky&#39;s Final Brushstroke
             </span>
             <h2 className="lg:text-[192px]/[164px] sm:text-[120px]/[96px] text-[60px]/[48px] font-extrabold  uppercase">
-              Explore
+              <AnimatedTitle>Explore</AnimatedTitle>
             </h2>
           </div>
           <div className="lg:col-start-2 lg:col-span-11 lg:row-start-[3] sm:col-start-2 sm:col-span-11 sm:row-start-[3] col-start-1 col-span-6 row-start-[3]">
@@ -433,10 +437,10 @@ export default function Home() {
             </span>
           </div>
           <div className="lg:col-start-8 lg:col-span-4 lg:row-start-[5] lg:row-end-[8] sm:col-start-8 sm:col-span-5 sm:row-start-[5] sm:row-end-[8] col-start-3 col-span-4 row-start-[6] row-end-[9] ">
-            <p className="lg:text-[36px]/[36px] sm:text-[28px]/[28px] text-[20px]/[20px]">
+            <AnimatedText className="lg:text-[36px]/[40px] sm:text-[28px]/[32px] text-[20px]/[20px]">
               Beyond the river and cityscape, you can also glimpse some of
               Porto&#39;s historic neighborhoods and districts.
-            </p>
+            </AnimatedText>
           </div>
         </div>
 
@@ -452,7 +456,8 @@ export default function Home() {
               Open to visitors
             </span>
             <h2 className="lg:text-[192px]/[164px] sm:text-[120px]/[96px] text-[60px]/[48px] font-extrabold  uppercase">
-              Working <br /> hours
+              <AnimatedTitle>Working</AnimatedTitle> <br />
+              <AnimatedTitle delay={0.7}>hours</AnimatedTitle>
             </h2>
           </div>
 
@@ -493,7 +498,7 @@ export default function Home() {
               Click the map for view
             </span>
             <h2 className="lg:text-[192px]/[164px] sm:text-[120px]/[96px] text-[60px]/[48px] font-extrabold  uppercase">
-              Location
+              <AnimatedTitle>Location</AnimatedTitle>
             </h2>
           </div>
 

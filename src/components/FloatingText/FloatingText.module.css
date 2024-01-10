@@ -1,0 +1,21 @@
+@keyframes floating {
+  100% {
+    opacity: 1;
+    transform: translate(0,0);
+  }
+}
+
+.floatingText :global(.letter) {
+  display: inline-block;
+  opacity: 0;
+  transform: translate(0,100%);
+}
+
+.floatingText:global(.active) :global(.letter) {
+  animation-duration: 0.4s;
+  animation-timing-function: cubic-bezier(.71,.12,.27,.96);
+  animation-fill-mode: forwards;
+  animation-name: floating;
+}
+
+
