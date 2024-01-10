@@ -53,6 +53,7 @@ const AnimatedImage = ({
       width={width}
       height={height}
       alt={alt ?? ""}
+      priority
       className={`w-full h-full object-cover rounded-lg  outline-[12px] outline ${outlineColor} ${imageClassName}`}
       style={{
         objectPosition: `50% ${100 - percentage / positionPercentageDivider}%`,
