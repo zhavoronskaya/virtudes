@@ -25,11 +25,14 @@ export default function MainScene() {
   return (
     <Canvas
       frameloop="demand"
-      performance={{ min: 0.5 }}
+      // performance={{ min: 0.5 }}
       className="h-full w-full"
       // shadows
       // dpr={[1, 2]}
       dpr={1}
+      gl={{
+        powerPreference: "high-performance",
+      }}
       camera={camera}
     >
       <Environment />
