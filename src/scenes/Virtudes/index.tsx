@@ -29,7 +29,7 @@ export default function MainScene() {
       className="h-full w-full"
       // shadows
       // dpr={[1, 2]}
-      // dpr={1}
+      dpr={1}
       camera={camera}
     >
       <Environment />
